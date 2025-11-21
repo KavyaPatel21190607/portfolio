@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="financeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#financeGradient)"/>
+  
+  <!-- Mobile phone frame -->
+  <rect x="60" y="30" width="80" height="140" rx="15" fill="white" stroke="#bdc3c7" stroke-width="2"/>
+  <rect x="65" y="40" width="70" height="120" fill="#ecf0f1"/>
+  
+  <!-- Header -->
+  <rect x="65" y="40" width="70" height="20" fill="#2ecc71"/>
+  <text x="100" y="53" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle">Finance App</text>
+  
+  <!-- Balance display -->
+  <rect x="70" y="70" width="60" height="25" rx="5" fill="white"/>
+  <text x="100" y="85" font-family="Arial" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">$2,450.00</text>
+  
+  <!-- Chart/Graph -->
+  <polyline points="70,110 80,105 90,100 100,95 110,100 120,90 130,85" 
+            stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <circle cx="70" cy="110" r="2" fill="#e74c3c"/>
+  <circle cx="130" cy="85" r="2" fill="#e74c3c"/>
+  
+  <!-- Transaction items -->
+  <rect x="70" y="120" width="60" height="8" rx="2" fill="#3498db" opacity="0.7"/>
+  <rect x="70" y="132" width="45" height="8" rx="2" fill="#e74c3c" opacity="0.7"/>
+  <rect x="70" y="144" width="50" height="8" rx="2" fill="#2ecc71" opacity="0.7"/>
+  
+  <!-- Dollar sign -->
+  <circle cx="40" cy="60" r="15" fill="white" opacity="0.9"/>
+  <text x="40" y="68" font-family="Arial" font-size="20" font-weight="bold" fill="#2ecc71" text-anchor="middle">$</text>
+  
+  <!-- Admin panel indicator -->
+  <rect x="150" y="50" width="25" height="15" rx="3" fill="white" opacity="0.9"/>
+  <text x="162" y="60" font-family="Arial" font-size="8" fill="#2ecc71" text-anchor="middle">ADMIN</text>
+</svg>

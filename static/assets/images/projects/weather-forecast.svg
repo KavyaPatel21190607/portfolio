@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="weatherGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#weatherGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="60" cy="60" r="20" fill="#f1c40f"/>
+  <g stroke="#f1c40f" stroke-width="3" opacity="0.8">
+    <line x1="60" y1="25" x2="60" y2="35"/>
+    <line x1="95" y1="60" x2="85" y2="60"/>
+    <line x1="25" y1="60" x2="35" y2="60"/>
+    <line x1="82" y1="38" x2="77" y2="43"/>
+    <line x1="82" y1="82" x2="77" y2="77"/>
+    <line x1="38" y1="38" x2="43" y2="43"/>
+    <line x1="38" y1="82" x2="43" y2="77"/>
+  </g>
+  
+  <!-- Cloud -->
+  <ellipse cx="130" cy="70" rx="25" ry="15" fill="white"/>
+  <ellipse cx="120" cy="65" rx="15" ry="12" fill="white"/>
+  <ellipse cx="140" cy="65" rx="18" ry="13" fill="white"/>
+  
+  <!-- Rain drops -->
+  <ellipse cx="120" cy="95" rx="2" ry="8" fill="#3498db"/>
+  <ellipse cx="130" cy="100" rx="2" ry="8" fill="#3498db"/>
+  <ellipse cx="140" cy="95" rx="2" ry="8" fill="#3498db"/>
+  
+  <!-- Temperature display -->
+  <rect x="30" y="120" width="140" height="50" rx="10" fill="white" fill-opacity="0.9"/>
+  <text x="100" y="140" font-family="Arial" font-size="16" font-weight="bold" fill="#2c3e50" text-anchor="middle">25°C</text>
+  <text x="100" y="155" font-family="Arial" font-size="12" fill="#7f8c8d" text-anchor="middle">Partly Cloudy</text>
+  
+  <!-- Weather icons -->
+  <circle cx="50" cy="145" r="8" fill="#f39c12"/>
+  <ellipse cx="150" cy="145" rx="12" ry="8" fill="#95a5a6"/>
+</svg>

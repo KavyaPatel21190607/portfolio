@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="agriGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#56ab2f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a8e6cf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#agriGrad)" rx="15"/>
+  <circle cx="50" cy="35" r="15" fill="rgba(255,255,255,0.9)"/>
+  <circle cx="45" cy="32" r="2" fill="#56ab2f"/>
+  <circle cx="55" cy="32" r="2" fill="#56ab2f"/>
+  <path d="M45 40 Q50 45 55 40" stroke="#56ab2f" stroke-width="2" fill="none"/>
+  <rect x="35" y="50" width="30" height="20" fill="rgba(255,255,255,0.9)" rx="5"/>
+  <path d="M25 75 L30 70 L35 75 L30 80 Z" fill="#a8e6cf"/>
+  <path d="M65 75 L70 70 L75 75 L70 80 Z" fill="#a8e6cf"/>
+  <rect x="45" y="75" width="10" height="15" fill="#8bc34a" rx="2"/>
+</svg>

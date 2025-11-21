@@ -1,0 +1,17 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="educationGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" fill="url(#educationGrad)" rx="15"/>
+  <rect x="20" y="30" width="60" height="40" fill="rgba(255,255,255,0.9)" rx="5"/>
+  <rect x="25" y="35" width="50" height="3" fill="#fd79a8" rx="1.5"/>
+  <rect x="25" y="40" width="35" height="2" fill="#fdcb6e" rx="1"/>
+  <rect x="25" y="44" width="25" height="2" fill="#fd79a8" rx="1"/>
+  <path d="M30 55 L35 50 L40 55 L35 60 Z" fill="#74b9ff"/>
+  <circle cx="65" cy="55" r="6" fill="#fd79a8"/>
+  <text x="65" y="59" text-anchor="middle" font-family="serif" font-size="8" fill="white">A</text>
+  <rect x="30" y="75" width="40" height="5" fill="rgba(255,255,255,0.7)" rx="2.5"/>
+</svg>

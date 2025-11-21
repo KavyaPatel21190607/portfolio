@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="voterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#voterGradient)"/>
+  
+  <!-- Ballot box -->
+  <rect x="70" y="80" width="60" height="50" rx="5" fill="white" stroke="#2c3e50" stroke-width="2"/>
+  <rect x="75" y="60" width="50" height="25" rx="3" fill="#2c3e50"/>
+  <circle cx="100" cy="72" r="3" fill="white"/>
+  
+  <!-- Ballot slot -->
+  <rect x="85" y="57" width="30" height="3" fill="#2c3e50"/>
+  
+  <!-- Voting slip -->
+  <rect x="90" y="40" width="20" height="25" rx="2" fill="white" stroke="#3498db" stroke-width="1"/>
+  <circle cx="95" cy="50" r="2" fill="#2ecc71"/>
+  <line x1="100" y1="48" x2="105" y2="48" stroke="#2c3e50" stroke-width="1"/>
+  <line x1="100" y1="52" x2="105" y2="52" stroke="#2c3e50" stroke-width="1"/>
+  
+  <!-- Arrow showing voting process -->
+  <path d="M95,65 L95,57" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  <path d="M92,60 L95,57 L98,60" stroke="#e74c3c" stroke-width="2" fill="none"/>
+  
+  <!-- Election symbols -->
+  <circle cx="50" cy="150" r="15" fill="white" opacity="0.9"/>
+  <text x="50" y="157" font-family="Arial" font-size="16" font-weight="bold" fill="#3498db" text-anchor="middle">✓</text>
+  
+  <!-- Security/Admin features -->
+  <rect x="130" y="140" width="25" height="15" rx="3" fill="white" opacity="0.9"/>
+  <text x="142" y="150" font-family="Arial" font-size="8" fill="#3498db" text-anchor="middle">ADMIN</text>
+  
+  <!-- Democratic symbol -->
+  <path d="M160,60 L170,50 L180,60 L175,70 L165,70 Z" fill="white" opacity="0.8"/>
+  <circle cx="170" cy="60" r="3" fill="#3498db"/>
+  
+  <!-- ID verification -->
+  <rect x="30" y="100" width="25" height="15" rx="2" fill="white" opacity="0.9"/>
+  <text x="42" y="110" font-family="Arial" font-size="8" fill="#3498db" text-anchor="middle">ID</text>
+</svg>

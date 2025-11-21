@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1abc9c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#ecommerceGradient)"/>
+  
+  <!-- Shopping cart -->
+  <rect x="60" y="80" width="50" height="30" rx="5" fill="white" stroke="#16a085" stroke-width="2"/>
+  <circle cx="70" cy="125" r="6" fill="white" stroke="#16a085" stroke-width="2"/>
+  <circle cx="100" cy="125" r="6" fill="white" stroke="#16a085" stroke-width="2"/>
+  <line x1="50" y1="75" x2="60" y2="80" stroke="white" stroke-width="3"/>
+  <line x1="45" y1="70" x2="50" y2="75" stroke="white" stroke-width="3"/>
+  
+  <!-- Cart items -->
+  <rect x="65" y="85" width="8" height="8" rx="1" fill="#e74c3c"/>
+  <rect x="75" y="85" width="8" height="8" rx="1" fill="#3498db"/>
+  <rect x="85" y="85" width="8" height="8" rx="1" fill="#f39c12"/>
+  <rect x="95" y="85" width="8" height="8" rx="1" fill="#9b59b6"/>
+  
+  <!-- Digital products -->
+  <rect x="120" y="60" width="40" height="30" rx="3" fill="white" opacity="0.9"/>
+  <text x="140" y="75" font-family="Arial" font-size="8" fill="#16a085" text-anchor="middle">WEBSITE</text>
+  <text x="140" y="85" font-family="Arial" font-size="6" fill="#7f8c8d" text-anchor="middle">$99</text>
+  
+  <rect x="120" y="100" width="40" height="30" rx="3" fill="white" opacity="0.9"/>
+  <text x="140" y="115" font-family="Arial" font-size="8" fill="#16a085" text-anchor="middle">APP</text>
+  <text x="140" y="125" font-family="Arial" font-size="6" fill="#7f8c8d" text-anchor="middle">$149</text>
+  
+  <!-- Payment integration -->
+  <rect x="40" y="140" width="35" height="20" rx="3" fill="white" opacity="0.9"/>
+  <text x="57" y="152" font-family="Arial" font-size="8" fill="#16a085" text-anchor="middle">STRIPE</text>
+  
+  <!-- Store front -->
+  <rect x="30" y="30" width="60" height="35" fill="white" stroke="#16a085" stroke-width="2"/>
+  <polygon points="30,30 60,15 90,30" fill="#e74c3c"/>
+  <rect x="35" y="40" width="8" height="8" fill="#3498db"/>
+  <rect x="45" y="40" width="8" height="8" fill="#3498db"/>
+  <rect x="35" y="50" width="8" height="8" fill="#3498db"/>
+  <rect x="45" y="50" width="8" height="8" fill="#3498db"/>
+  <rect x="60" y="50" width="8" height="15" fill="#8d6e63"/>
+  
+  <!-- Online indicator -->
+  <circle cx="170" cy="40" r="8" fill="white" opacity="0.9"/>
+  <text x="170" y="44" font-family="Arial" font-size="8" fill="#16a085" text-anchor="middle">ON</text>
+  
+  <!-- Revenue chart -->
+  <polyline points="140,160 150,155 160,150 170,145" stroke="white" stroke-width="2" fill="none"/>
+  <circle cx="170" cy="145" r="2" fill="white"/>
+  <text x="175" y="150" font-family="Arial" font-size="8" fill="white">↗</text>
+</svg>

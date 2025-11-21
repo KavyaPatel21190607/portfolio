@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="kissanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b35;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#kissanGradient)"/>
+  
+  <!-- Farmer figure -->
+  <circle cx="100" cy="70" r="15" fill="#8d6e63"/>
+  <rect x="90" y="85" width="20" height="30" rx="10" fill="#4caf50"/>
+  <rect x="85" y="95" width="8" height="25" fill="#8d6e63"/>
+  <rect x="107" y="95" width="8" height="25" fill="#8d6e63"/>
+  
+  <!-- Hat -->
+  <ellipse cx="100" cy="60" rx="18" ry="8" fill="#795548"/>
+  
+  <!-- Wheat/Crops -->
+  <g transform="translate(50, 130)">
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#ffc107" stroke-width="2"/>
+    <ellipse cx="0" cy="-5" rx="4" ry="8" fill="#ffeb3b"/>
+    <ellipse cx="-3" cy="-8" rx="2" ry="4" fill="#ffeb3b"/>
+    <ellipse cx="3" cy="-8" rx="2" ry="4" fill="#ffeb3b"/>
+  </g>
+  <g transform="translate(70, 135)">
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#ffc107" stroke-width="2"/>
+    <ellipse cx="0" cy="-4" rx="3" ry="6" fill="#ffeb3b"/>
+  </g>
+  <g transform="translate(130, 135)">
+    <line x1="0" y1="0" x2="0" y2="22" stroke="#ffc107" stroke-width="2"/>
+    <ellipse cx="0" cy="-4" rx="4" ry="7" fill="#ffeb3b"/>
+  </g>
+  <g transform="translate(150, 140)">
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#ffc107" stroke-width="2"/>
+    <ellipse cx="0" cy="-3" rx="3" ry="5" fill="#ffeb3b"/>
+  </g>
+  
+  <!-- Government building/support symbol -->
+  <rect x="120" y="45" width="30" height="20" fill="white"/>
+  <polygon points="120,45 135,35 150,45" fill="white"/>
+  <rect x="125" y="50" width="3" height="10" fill="#ff9500"/>
+  <rect x="132" y="50" width="3" height="10" fill="#ff9500"/>
+  <rect x="139" y="50" width="3" height="10" fill="#ff9500"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="170" width="200" height="30" fill="#8d6e63"/>
+  
+  <!-- Support/help icon -->
+  <circle cx="160" cy="80" r="10" fill="white"/>
+  <text x="160" y="85" font-family="Arial" font-size="12" font-weight="bold" fill="#ff9500" text-anchor="middle">₹</text>
+</svg>

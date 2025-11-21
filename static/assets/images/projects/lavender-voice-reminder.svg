@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="voiceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9c88ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c4dff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#voiceGradient)"/>
+  
+  <!-- Microphone -->
+  <rect x="90" y="60" width="20" height="40" rx="10" fill="white"/>
+  <rect x="85" y="105" width="30" height="15" rx="3" fill="white"/>
+  <line x1="100" y1="120" x2="100" y2="135" stroke="white" stroke-width="3"/>
+  <line x1="85" y1="135" x2="115" y2="135" stroke="white" stroke-width="3"/>
+  
+  <!-- Sound waves -->
+  <g stroke="white" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M125,70 Q135,80 125,90"/>
+    <path d="M130,65 Q145,80 130,95"/>
+    <path d="M135,60 Q155,80 135,100"/>
+  </g>
+  <g stroke="white" stroke-width="2" fill="none" opacity="0.8">
+    <path d="M75,70 Q65,80 75,90"/>
+    <path d="M70,65 Q55,80 70,95"/>
+    <path d="M65,60 Q45,80 65,100"/>
+  </g>
+  
+  <!-- To-do list -->
+  <rect x="130" y="110" width="50" height="60" rx="5" fill="white" opacity="0.9"/>
+  <circle cx="140" cy="125" r="3" fill="#9c88ff"/>
+  <line x1="145" y1="123" x2="170" y2="123" stroke="#2c3e50" stroke-width="1"/>
+  <line x1="145" y1="127" x2="165" y2="127" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <circle cx="140" cy="140" r="3" fill="#9c88ff"/>
+  <line x1="145" y1="138" x2="170" y2="138" stroke="#2c3e50" stroke-width="1"/>
+  <line x1="145" y1="142" x2="160" y2="142" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <circle cx="140" cy="155" r="3" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="145" y1="153" x2="170" y2="153" stroke="#bdc3c7" stroke-width="1"/>
+  <line x1="145" y1="157" x2="165" y2="157" stroke="#bdc3c7" stroke-width="1"/>
+  
+  <!-- Voice activation indicator -->
+  <circle cx="100" cy="40" r="12" fill="white" opacity="0.9"/>
+  <circle cx="100" cy="40" r="8" fill="#9c88ff"/>
+  <circle cx="100" cy="40" r="4" fill="white"/>
+  
+  <!-- Lavender flowers -->
+  <g transform="translate(40, 140)">
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#8e44ad" stroke-width="2"/>
+    <ellipse cx="0" cy="-5" rx="3" ry="8" fill="#d1c4e9"/>
+    <ellipse cx="-2" cy="-8" rx="2" ry="4" fill="#d1c4e9"/>
+    <ellipse cx="2" cy="-8" rx="2" ry="4" fill="#d1c4e9"/>
+  </g>
+  <g transform="translate(25, 150)">
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#8e44ad" stroke-width="2"/>
+    <ellipse cx="0" cy="-4" rx="2" ry="6" fill="#d1c4e9"/>
+  </g>
+  
+  <!-- Speaker/audio output -->
+  <path d="M160,40 L170,35 L175,30 L175,50 L170,45 L160,40" fill="white" opacity="0.8"/>
+  <g stroke="white" stroke-width="1" fill="none" opacity="0.6">
+    <path d="M178,35 Q183,40 178,45"/>
+    <path d="M181,32 Q188,40 181,48"/>
+  </g>
+</svg>

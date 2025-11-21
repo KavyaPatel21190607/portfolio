@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="youtubeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#youtubeGradient)"/>
+  
+  <!-- Video player -->
+  <rect x="40" y="50" width="120" height="80" rx="8" fill="black" stroke="white" stroke-width="2"/>
+  
+  <!-- Play button -->
+  <circle cx="100" cy="90" r="20" fill="white" opacity="0.9"/>
+  <polygon points="92,80 92,100 112,90" fill="#ff0000"/>
+  
+  <!-- Video progress bar -->
+  <rect x="45" y="120" width="110" height="3" fill="#333"/>
+  <rect x="45" y="120" width="40" height="3" fill="white"/>
+  <circle cx="85" cy="121" r="3" fill="white"/>
+  
+  <!-- Video thumbnails grid -->
+  <rect x="30" y="140" width="35" height="25" rx="3" fill="white" opacity="0.8"/>
+  <polygon points="42,147 42,158 52,152" fill="#ff0000"/>
+  
+  <rect x="75" y="140" width="35" height="25" rx="3" fill="white" opacity="0.8"/>
+  <polygon points="87,147 87,158 97,152" fill="#ff0000"/>
+  
+  <rect x="120" y="140" width="35" height="25" rx="3" fill="white" opacity="0.8"/>
+  <polygon points="132,147 132,158 142,152" fill="#ff0000"/>
+  
+  <!-- Upload icon -->
+  <rect x="160" y="60" width="25" height="20" rx="3" fill="white" opacity="0.9"/>
+  <path d="M172,65 L172,75" stroke="#ff0000" stroke-width="2"/>
+  <path d="M167,70 L172,65 L177,70" stroke="#ff0000" stroke-width="2" fill="none"/>
+  
+  <!-- Live streaming indicator -->
+  <rect x="45" y="55" width="25" height="12" rx="2" fill="#ff0000"/>
+  <text x="57" y="63" font-family="Arial" font-size="8" font-weight="bold" fill="white" text-anchor="middle">LIVE</text>
+  
+  <!-- Subscriber count -->
+  <rect x="120" y="175" width="50" height="15" rx="2" fill="white" opacity="0.9"/>
+  <text x="145" y="185" font-family="Arial" font-size="8" fill="#ff0000" text-anchor="middle">1.2M Subs</text>
+  
+  <!-- Comments/interaction -->
+  <circle cx="60" cy="185" r="8" fill="white" opacity="0.9"/>
+  <text x="60" y="189" font-family="Arial" font-size="10" fill="#ff0000" text-anchor="middle">💬</text>
+  
+  <!-- Views counter -->
+  <text x="100" y="40" font-family="Arial" font-size="12" fill="white" text-anchor="middle">1.5M views</text>
+</svg>

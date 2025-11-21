@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Portfolio | 3D Interactive Experience</title>
+    <meta name="description" content="Premium portfolio showcasing cutting-edge web development with immersive 3D experiences">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/3d.css') }}">
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GPU Optimizer for RTX Graphics Cards -->
+    <script src="{{ url_for('static', filename='js/gpu-optimizer.js') }}"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading Experience...</h2>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-3d" id="nav-logo-3d"></div>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#hero" class="nav-link" data-section="hero">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#achievements" class="nav-link" data-section="achievements">
+                        <i class="fas fa-trophy"></i>
+                        <span>Achievements</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/dashboard" class="nav-link">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle neon mode">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg" id="hero-bg-3d"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">Premium</span>
+                        <span class="title-line">Portfolio</span>
+                        <span class="title-line accent">Experience</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Crafting immersive digital experiences with cutting-edge 3D technology
+                    </p>
+                    <div class="hero-actions">
+                        <a href="/dashboard" class="btn btn-primary btn-3d">
+                            <span>Explore Dashboard</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary btn-3d">
+                            <span>View Projects</span>
+                            <i class="fas fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-3d-container">
+                    <div id="hero-3d-model" class="hero-3d-model"></div>
+                </div>
+            </div>
+            <div class="hero-scroll-indicator">
+                <div class="scroll-arrow"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-intro">
+                            <h3>Hi, I'm Kavya!</h3>
+                            <h4 class="about-title">Full-Stack Developer & Digital Innovator</h4>
+                            <p class="about-description">
+                                I'm a passionate full-stack developer with a deep love for creating immersive 
+                                digital experiences that push the boundaries of modern web technology. My journey 
+                                in software development spans across multiple domains, from crafting beautiful 
+                                user interfaces to architecting robust backend systems.
+                            </p>
+                        </div>
+                        
+                        <div class="about-expertise">
+                            <h4>What I Do</h4>
+                            <div class="expertise-grid">
+                                <div class="expertise-item">
+                                    <i class="fas fa-code"></i>
+                                    <h5>Frontend Development</h5>
+                                    <p>Creating responsive, interactive web applications using React, Vue.js, and modern JavaScript frameworks with a focus on user experience.</p>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-server"></i>
+                                    <h5>Backend Architecture</h5>
+                                    <p>Building scalable server-side applications with Python, Node.js, and cloud technologies, ensuring robust and secure systems.</p>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-cube"></i>
+                                    <h5>3D & Graphics</h5>
+                                    <p>Specializing in Three.js and WebGL to create stunning 3D visualizations and immersive web experiences.</p>
+                                </div>
+                                <div class="expertise-item">
+                                    <i class="fas fa-brain"></i>
+                                    <h5>AI Integration</h5>
+                                    <p>Implementing machine learning solutions and AI-powered features to enhance user experiences and business capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-3d fallback-glow" data-value="5">
+                                    <span class="stat-number">5+</span>
+                                </div>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-3d fallback-glow" data-value="25">
+                                    <span class="stat-number">25+</span>
+                                </div>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-3d fallback-glow" data-value="15">
+                                    <span class="stat-number">15+</span>
+                                </div>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-3d fallback-glow" data-value="8">
+                                    <span class="stat-number">8+</span>
+                                </div>
+                                <span class="stat-label">Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <div class="profile-container">
+                            <div class="profile-image-wrapper">
+                                <img src="{{ url_for('static', filename='assets/images/kavya-photo.jpg') }}" alt="Kavya - Full Stack Developer" class="profile-image fallback-3d">
+                                <div class="profile-glow"></div>
+                                <div class="profile-border"></div>
+                            </div>
+                            <div class="profile-info">
+                                <div class="tech-stack">
+                                    <div class="tech-item">Python</div>
+                                    <div class="tech-item">JavaScript</div>
+                                    <div class="tech-item">React</div>
+                                    <div class="tech-item">Three.js</div>
+                                    <div class="tech-item">Node.js</div>
+                                    <div class="tech-item">Flask</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="about-3d-scene" class="about-3d-scene"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="achievements-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Achievements</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Professional development milestones and competition accomplishments</p>
+                </div>
+                <div class="achievements-content">
+                    <div class="achievement-filters">
+                        <button class="achievement-filter-btn active" data-filter="all">All</button>
+                        <button class="achievement-filter-btn" data-filter="Professional Development">
+                            <i class="fas fa-graduation-cap"></i>
+                            Professional
+                        </button>
+                        <button class="achievement-filter-btn" data-filter="Competitions & Hackathons">
+                            <i class="fas fa-trophy"></i>
+                            Competitions
+                        </button>
+                    </div>
+                    <div class="achievements-grid" id="achievements-grid">
+                        <!-- Achievements will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="projects-content">
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+                        <button class="filter-btn" data-filter="Mobile">Mobile</button>
+                        <button class="filter-btn" data-filter="Blockchain">Blockchain</button>
+                        <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+                        <button class="filter-btn" data-filter="IoT">IoT</button>
+                        <button class="filter-btn" data-filter="Data Science">Data Science</button>
+                        <button class="filter-btn" data-filter="Fintech">Fintech</button>
+                    </div>
+                    <div class="projects-grid" id="projects-grid">
+                        <!-- Projects will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 2rem; text-align: center; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Let's Connect & Collaborate</h2>
+                    <p style="text-align: center; font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Ready to bring your vision to life? Let's discuss your next project and create something amazing together.</p>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary);">Get In Touch</h3>
+                        <p style="font-size: 1.125rem; line-height: 1.6; margin-bottom: 2rem; color: var(--text-secondary);">I'm always excited to work on innovative projects and collaborate with talented individuals. Whether you have a specific idea in mind or just want to explore possibilities, let's start a conversation.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-text">
+                                    <h4>Email</h4>
+                                    <p>kavyapatel1952007@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-text">
+                                    <h4>Phone</h4>
+                                    <p>+917698929831</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-text">
+                                    <h4>Location</h4>
+                                    <p>Gujarat,India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-3d submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        <div id="contact-feedback" class="contact-feedback"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Portfolio</h3>
+                    <p>Creating immersive digital experiences with cutting-edge technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="/dashboard">Dashboard</a></li>
+
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Particle Background -->
+    <div id="particles-background" class="particles-background"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/3d-renderer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

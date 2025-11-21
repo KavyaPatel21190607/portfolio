@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard | Premium Portfolio</title>
+    <meta name="description" content="Interactive 3D dashboard showcasing portfolio features and analytics">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/3d.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- GPU Optimizer for RTX Graphics Cards -->
+    <script src="{{ url_for('static', filename='js/gpu-optimizer.js') }}"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Chart.js for 3D Statistics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <!-- Navigation -->
+    <nav class="dashboard-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/" class="logo-link">
+                    <div class="logo-3d" id="nav-logo-3d"></div>
+                    <span class="logo-text">Portfolio</span>
+                </a>
+            </div>
+            <div class="nav-actions">
+                <button id="theme-switcher" class="theme-switcher">
+                    <div class="theme-cube" id="theme-cube"></div>
+                </button>
+                <a href="/" class="btn btn-secondary">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="dashboard-container">
+            <!-- Dashboard Header -->
+            <header class="dashboard-header">
+                <h1 class="dashboard-title">Interactive Portfolio Dashboard</h1>
+                <p class="dashboard-subtitle">Explore my work through immersive 3D experiences</p>
+            </header>
+
+            <!-- Dashboard Grid -->
+            <div class="dashboard-grid">
+                <!-- 3D Project Gallery -->
+                <section class="dashboard-widget widget-large" id="project-gallery-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-cube"></i>
+                            3D Project Gallery
+                        </h3>
+                        <div class="widget-controls">
+                            <button class="widget-control" data-action="rotate">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div id="project-gallery-3d" class="project-gallery-3d"></div>
+                        <div class="gallery-filters">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+                            <button class="filter-btn" data-filter="Mobile">Mobile</button>
+                            <button class="filter-btn" data-filter="Blockchain">Blockchain</button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Sphere -->
+                <section class="dashboard-widget" id="skills-sphere-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-atom"></i>
+                            Skills Sphere
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div id="skills-sphere-3d" class="skills-sphere-3d"></div>
+                        <div class="skill-info" id="skill-info">
+                            <h4>Hover over skills to learn more</h4>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Professional Timeline -->
+                <section class="dashboard-widget widget-wide" id="timeline-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-timeline"></i>
+                            Professional Timeline
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div id="timeline-3d" class="timeline-3d"></div>
+                        <div class="timeline-controls">
+                            <button class="timeline-control" data-action="prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="timeline-control" data-action="next">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonial Globe -->
+                <section class="dashboard-widget" id="testimonial-globe-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-globe"></i>
+                            Testimonial Globe
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div id="testimonial-globe-3d" class="testimonial-globe-3d"></div>
+                        <div class="testimonial-info" id="testimonial-info">
+                            <p>Click on pins to read testimonials</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Statistics Widget -->
+                <section class="dashboard-widget" id="stats-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-chart-bar"></i>
+                            Portfolio Statistics
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <div id="stats-display-3d" class="stats-display-3d"></div>
+                    </div>
+                </section>
+
+
+
+                <!-- Contact Form with 3D Feedback -->
+                <section class="dashboard-widget widget-wide" id="contact-form-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-envelope"></i>
+                            Contact Form
+                        </h3>
+                    </div>
+                    <div class="widget-content">
+                        <form id="dashboard-contact-form" class="dashboard-contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="6" required style="min-height: 120px; resize: vertical;"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-3d" style="color: white; font-weight: 600;">
+                                <span style="color: white; position: relative; z-index: 10;">Send Message</span>
+                                <div class="btn-3d-effect" id="contact-btn-3d"></div>
+                            </button>
+                        </form>
+                        <div id="contact-feedback-3d" class="contact-feedback-3d"></div>
+                    </div>
+                </section>
+
+
+
+                <!-- Achievements Section -->
+                <section class="dashboard-widget" id="achievements-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">
+                            <i class="fas fa-trophy"></i>
+                            Achievements
+                        </h3>
+                        <div class="achievement-controls">
+                            <button class="achievement-filter active" data-filter="all">All</button>
+                            <button class="achievement-filter" data-filter="Professional Development">Professional</button>
+                            <button class="achievement-filter" data-filter="Competitions & Hackathons">Competitions</button>
+                        </div>
+                    </div>
+                    <div class="widget-content">
+                        <div id="achievements-display-3d" class="achievements-display-3d"></div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Particle Background -->
+    <div id="particles-background" class="particles-background"></div>
+
+    <!-- Theme Transition Overlay -->
+    <div id="theme-transition" class="theme-transition"></div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/api.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/particles.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/3d-renderer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

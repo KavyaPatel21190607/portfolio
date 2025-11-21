@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="premiumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f39c12;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffb347;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#premiumGradient)"/>
+  
+  <!-- Premium crown -->
+  <path d="M100,30 L110,50 L130,45 L120,65 L100,60 L80,65 L70,45 L90,50 Z" fill="#ffd700" stroke="white" stroke-width="2"/>
+  <circle cx="85" cy="45" r="3" fill="#e74c3c"/>
+  <circle cx="100" cy="40" r="3" fill="#e74c3c"/>
+  <circle cx="115" cy="45" r="3" fill="#e74c3c"/>
+  
+  <!-- 3D Portfolio mockup -->
+  <rect x="50" y="70" width="100" height="70" rx="8" fill="white" stroke="#e67e22" stroke-width="2"/>
+  
+  <!-- 3D effect layers -->
+  <rect x="55" y="75" width="90" height="60" rx="5" fill="url(#glowGradient)"/>
+  <rect x="60" y="80" width="80" height="50" rx="3" fill="#2c3e50"/>
+  
+  <!-- 3D elements inside -->
+  <circle cx="85" cy="100" r="8" fill="#3498db" opacity="0.8"/>
+  <rect x="100" y="95" width="25" height="10" rx="2" fill="#e74c3c" opacity="0.8"/>
+  <polygon points="110,110 120,110 115,120" fill="#2ecc71" opacity="0.8"/>
+  
+  <!-- WebGL/Three.js symbols -->
+  <text x="30" y="100" font-family="monospace" font-size="12" fill="white" opacity="0.7">3D</text>
+  <text x="170" y="100" font-family="serif" font-size="14" fill="white" opacity="0.7">GL</text>
+  
+  <!-- Animation trails -->
+  <g stroke="white" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M40,120 Q60,110 80,120"/>
+    <path d="M120,120 Q140,110 160,120"/>
+  </g>
+  
+  <!-- Advanced features indicators -->
+  <circle cx="40" cy="150" r="10" fill="white" opacity="0.9"/>
+  <text x="40" y="155" font-family="Arial" font-size="8" fill="#f39c12" text-anchor="middle">GSAP</text>
+  
+  <circle cx="100" cy="150" r="10" fill="white" opacity="0.9"/>
+  <text x="100" y="155" font-family="Arial" font-size="8" fill="#f39c12" text-anchor="middle">CSS3</text>
+  
+  <circle cx="160" cy="150" r="10" fill="white" opacity="0.9"/>
+  <text x="160" y="155" font-family="Arial" font-size="8" fill="#f39c12" text-anchor="middle">React</text>
+  
+  <!-- Premium badge -->
+  <rect x="130" y="25" width="40" height="15" rx="7" fill="white" opacity="0.9"/>
+  <text x="150" y="35" font-family="Arial" font-size="8" font-weight="bold" fill="#f39c12" text-anchor="middle">PREMIUM</text>
+  
+  <!-- Sparkle effects -->
+  <g fill="white" opacity="0.8">
+    <path d="M25,60 L27,66 L33,68 L27,70 L25,76 L23,70 L17,68 L23,66 Z"/>
+    <path d="M175,60 L176,64 L180,65 L176,66 L175,70 L174,66 L170,65 L174,64 Z"/>
+    <path d="M160,180 L161,183 L164,184 L161,185 L160,188 L159,185 L156,184 L159,183 Z"/>
+  </g>
+  
+  <!-- Performance indicator -->
+  <text x="100" y="180" font-family="Arial" font-size="10" fill="white" text-anchor="middle">60 FPS</text>
+</svg>

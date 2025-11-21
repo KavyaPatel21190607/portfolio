@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="farmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#farmGradient)"/>
+  
+  <!-- Chatbot head -->
+  <rect x="70" y="50" width="60" height="50" rx="15" fill="white"/>
+  <circle cx="85" cy="70" r="5" fill="#27ae60"/>
+  <circle cx="115" cy="70" r="5" fill="#27ae60"/>
+  <rect x="90" y="85" width="20" height="3" rx="1" fill="#27ae60"/>
+  
+  <!-- Chat bubble -->
+  <ellipse cx="140" cy="40" rx="25" ry="15" fill="white"/>
+  <polygon points="120,45 115,50 125,50" fill="white"/>
+  <text x="130" y="45" font-family="Arial" font-size="12" fill="#27ae60" text-anchor="middle">Hi!</text>
+  
+  <!-- Crops/plants -->
+  <g transform="translate(40, 120)">
+    <line x1="0" y1="0" x2="0" y2="20" stroke="#8bc34a" stroke-width="3"/>
+    <ellipse cx="0" cy="-5" rx="8" ry="12" fill="#4caf50"/>
+  </g>
+  <g transform="translate(60, 130)">
+    <line x1="0" y1="0" x2="0" y2="15" stroke="#8bc34a" stroke-width="2"/>
+    <ellipse cx="0" cy="-3" rx="6" ry="8" fill="#4caf50"/>
+  </g>
+  <g transform="translate(120, 125)">
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#8bc34a" stroke-width="3"/>
+    <ellipse cx="0" cy="-4" rx="7" ry="10" fill="#4caf50"/>
+  </g>
+  <g transform="translate(140, 135)">
+    <line x1="0" y1="0" x2="0" y2="12" stroke="#8bc34a" stroke-width="2"/>
+    <ellipse cx="0" cy="-2" rx="5" ry="6" fill="#4caf50"/>
+  </g>
+  
+  <!-- Ground -->
+  <rect x="0" y="170" width="200" height="30" fill="#8d6e63"/>
+  
+  <!-- Sun -->
+  <circle cx="160" cy="60" r="12" fill="#ffeb3b" opacity="0.8"/>
+  <g stroke="#ffeb3b" stroke-width="2" opacity="0.6">
+    <line x1="160" y1="35" x2="160" y2="40"/>
+    <line x1="185" y1="60" x2="180" y2="60"/>
+    <line x1="178" y1="42" x2="175" y2="45"/>
+    <line x1="178" y1="78" x2="175" y2="75"/>
+  </g>
+</svg>

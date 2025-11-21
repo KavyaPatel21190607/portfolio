@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="portfolioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="200" height="200" rx="20" fill="url(#portfolioGradient)"/>
+  
+  <!-- Browser window -->
+  <rect x="30" y="40" width="140" height="100" rx="8" fill="white" stroke="#bdc3c7" stroke-width="2"/>
+  
+  <!-- Browser header -->
+  <rect x="30" y="40" width="140" height="20" rx="8" fill="#ecf0f1"/>
+  <circle cx="45" cy="50" r="3" fill="#e74c3c"/>
+  <circle cx="55" cy="50" r="3" fill="#f39c12"/>
+  <circle cx="65" cy="50" r="3" fill="#27ae60"/>
+  
+  <!-- Content sections -->
+  <rect x="40" y="70" width="60" height="8" rx="2" fill="#3498db"/>
+  <rect x="40" y="85" width="40" height="4" rx="1" fill="#bdc3c7"/>
+  <rect x="40" y="95" width="80" height="4" rx="1" fill="#bdc3c7"/>
+  <rect x="40" y="105" width="50" height="4" rx="1" fill="#bdc3c7"/>
+  
+  <!-- Profile image placeholder -->
+  <circle cx="140" cy="95" r="15" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+  <circle cx="140" cy="90" r="5" fill="#bdc3c7"/>
+  <path d="M130,105 Q140,100 150,105" stroke="#bdc3c7" stroke-width="2" fill="none"/>
+  
+  <!-- Code symbol -->
+  <text x="80" y="170" font-family="monospace" font-size="24" font-weight="bold" fill="white">&lt;/&gt;</text>
+</svg>
